@@ -19,7 +19,7 @@ st.set_page_config(
     menu_items={
         'Get Help': 'https://github.com/streamlit',
         'Report a bug': "https://github.com/streamlit",
-        'About': "### ♻️ Clasificador de Residuos con IA\nAplicación desarrollada con TensorFlow y Streamlit"
+        'About': "### ♻️ Clasificador de Residuos con IA\nAplicación desarrollada con Keras,TensorFlow y Streamlit"
     }
 )
 
@@ -378,7 +378,7 @@ with pestana_clasificador:
     st.title("🌍 Clasificador Inteligente de Residuos")
     st.markdown(
         """
-        Este sistema utiliza **Inteligencia Artificial con TensorFlow** para identificar residuos y clasificarlos como **reciclables** o **inorgánicos**.
+        Este sistema utiliza **Inteligencia Artificial con Keras, TensorFlow** para identificar residuos y clasificarlos como **reciclables** o **inorgánicos**.
         Sube una imagen y descubre a qué categoría pertenece tu residuo: **cartón, vidrio, metal, papel, plástico o basura**.
         """
     )
@@ -400,7 +400,7 @@ with pestana_clasificador:
         umbral_confianza = 73
         
         st.markdown("---")
-        st.markdown("Desarrollado con **TensorFlow 🧠 y Streamlit**")
+        st.markdown("Desarrollado con **Keras, TensorFlow 🧠 y Streamlit**")
 
     # --- Sección de carga de imágenes ---
     st.subheader("📷 Sube una imagen del residuo")
@@ -789,7 +789,7 @@ with pestana_about:
     st.markdown("""
     ## ♻️ Clasificador de Residuos Inteligente
     
-    Una aplicación web interactiva desarrollada con **TensorFlow y Streamlit** que utiliza 
+    Una aplicación web interactiva desarrollada con **Keras, TensorFlow y Streamlit** que utiliza 
     **aprendizaje profundo** para clasificar imágenes de residuos y promover el reciclaje correcto.
     """)
     
