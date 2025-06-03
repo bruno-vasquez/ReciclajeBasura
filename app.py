@@ -10,6 +10,7 @@ from tensorflow.keras.preprocessing import image
 import cv2
 import tempfile
 import os
+import gdown
 
 # --- Configuración de página ---
 st.set_page_config(
@@ -28,11 +29,20 @@ st.set_page_config(
 def cargar_modelo():
     with st.spinner("Cargando modelo de IA... Esto puede tardar un momento."):
         try:
-            model = tf.keras.models.load_model("modelo_residuos.keras")
+            modelo_path = "modelo_residuos.keras"
+            file_id = "12bLgOTa53KNtiAu6CsapqGAV9KTofZjy"
+            url = f"https://drive.google.com/uc?id={file_id}"
+
+            if not os.path.exists(modelo_path):
+                st.info("Descargando modelo desde Google Drive...")
+                gdown.download(url, modelo_path, quiet=False)
+
+            model = tf.keras.models.load_model(modelo_path)
             st.success("¡Modelo cargado con éxito!")
             return model
+
         except Exception as e:
-            st.error(f"Error al cargar el modelo: {e}. Asegúrate de que 'modelo_residuos.keras' esté en la misma carpeta.")
+            st.error(f"Error al cargar el modelo: {e}. Asegúrate de que el archivo esté accesible.")
             st.stop()
 
 modelo = cargar_modelo()
