@@ -19,7 +19,7 @@ st.set_page_config(
     menu_items={
         'Get Help': 'https://github.com/streamlit',
         'Report a bug': "https://github.com/streamlit",
-        'About': "### ♻️ Clasificador de Residuos con IA\nAplicación desarrollada con Keras,TensorFlow y Streamlit"
+        'About': "### ♻️ Clasificador de Residuos Inteligente\nAplicación desarrollada con Keras,TensorFlow y Streamlit"
     }
 )
 
